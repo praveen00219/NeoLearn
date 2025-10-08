@@ -11,7 +11,11 @@ export const metadata: Metadata = {
   description: 'Revise from your coursebooks with AI-powered quizzes and chat assistance',
   keywords: ['education', 'AI', 'learning', 'quiz', 'PDF', 'study'],
   authors: [{ name: 'BeyondChats Team' }],
-  viewport: 'width=device-width, initial-scale=1',
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
