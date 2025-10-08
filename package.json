@@ -9,38 +9,40 @@
     "lint": "next lint",
     "db:push": "prisma db push",
     "db:studio": "prisma studio",
-    "db:generate": "prisma generate"
+    "db:generate": "prisma generate",
+    "db:seed": "tsx src/scripts/seed.ts"
   },
   "dependencies": {
-    "next": "14.0.4",
-    "react": "^18",
-    "react-dom": "^18",
+    "@hookform/resolvers": "^3.3.2",
     "@prisma/client": "^5.7.1",
-    "prisma": "^5.7.1",
-    "openai": "^4.20.1",
-    "pdfjs-dist": "^3.11.174",
-    "react-pdf": "^7.6.0",
-    "react-query": "^3.39.3",
+    "clsx": "^2.0.0",
     "framer-motion": "^10.16.16",
     "lucide-react": "^0.294.0",
-    "clsx": "^2.0.0",
-    "tailwind-merge": "^2.2.0",
+    "next": "14.0.4",
+    "openai": "^4.20.1",
+    "pdfjs-dist": "^3.11.174",
+    "prisma": "^5.7.1",
+    "react": "^18",
+    "react-dom": "^18",
     "react-hook-form": "^7.48.2",
-    "zod": "^3.22.4",
-    "@hookform/resolvers": "^3.3.2",
     "react-hot-toast": "^2.4.1",
-    "uuid": "^9.0.1"
+    "react-pdf": "^7.6.0",
+    "react-query": "^3.39.3",
+    "tailwind-merge": "^2.2.0",
+    "uuid": "^9.0.1",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/uuid": "^9.0.7",
     "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.4"
+    "tsx": "^4.20.6",
+    "typescript": "^5"
   }
 }

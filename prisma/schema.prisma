@@ -22,6 +22,7 @@ model User {
   quizzes   Quiz[]
   progress  Progress[]
   chats     Chat[]
+  quizAttempts QuizAttempt[]
 
   @@map("users")
 }
@@ -60,7 +61,7 @@ model PDFChunk {
 model Quiz {
   id          String      @id @default(cuid())
   title       String
-  type        QuizType
+  type        String      // MCQ, SAQ, LAQ, MIXED
   questions   String      // JSON string of questions
   answers     String?     // JSON string of correct answers
   createdAt   DateTime    @default(now())
@@ -127,7 +128,7 @@ model Chat {
 model ChatMessage {
   id        String      @id @default(cuid())
   content   String
-  role      MessageRole
+  role      String      // USER, ASSISTANT, SYSTEM
   createdAt DateTime    @default(now())
   chatId    String
 
@@ -137,15 +138,6 @@ model ChatMessage {
   @@map("chat_messages")
 }
 
-enum QuizType {
-  MCQ
-  SAQ
-  LAQ
-  MIXED
-}
-
-enum MessageRole {
-  USER
-  ASSISTANT
-  SYSTEM
-}
+// Enums are not supported in SQLite, using strings instead
+// QuizType: MCQ, SAQ, LAQ, MIXED
+// MessageRole: USER, ASSISTANT, SYSTEM
