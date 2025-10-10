@@ -6,8 +6,12 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: ['localhost'],
+    domains: ['localhost', 'lh3.googleusercontent.com', 'yt3.ggpht.com'],
   },
+  experimental: {
+    serverComponentsExternalPackages: ['pdfjs-dist'],
+  },
+  output: 'standalone',
 }
 
 module.exports = nextConfig

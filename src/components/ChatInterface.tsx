@@ -261,3 +261,5 @@ export function ChatInterface({ chatId, onChatCreated, pdfId, pdfTitle }: ChatIn
     </div>
   )
 }
+
+
